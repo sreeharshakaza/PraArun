@@ -167,6 +167,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MvccrudController.cs" />
     <Compile Include="Controllers\MvccrudEntityController.cs" />
+    <Compile Include="Controllers\RazorController.cs" />
+    <Compile Include="CustomHelpers.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -324,6 +326,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\MvccrudEntity\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Razor\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Razor\HtmlHelper.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

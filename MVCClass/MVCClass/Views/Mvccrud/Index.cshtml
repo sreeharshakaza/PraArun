@@ -13,6 +13,7 @@
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
+            
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Address)
@@ -33,6 +34,8 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
+            @Html.TextBoxFor(modelItem => item.Name)
+            @Html.EditorFor
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Address)

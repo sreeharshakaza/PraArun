@@ -1,0 +1,65 @@
+﻿@using MVCClass
+
+@{
+    ViewBag.Title = "HtmlHelper";
+}
+
+
+@helper ListingNames(string[] items){
+    <ol>
+    @foreach(string item in items){
+        <li>@item</li>
+    }
+    </ol>
+}
+
+<h2>HtmlHelper</h2>
+
+<ul>
+    <li>Inline Html Helpers</li>
+    <li>Builtin Html helpers
+        <ul>    
+            <li>Standard html helpers</li>
+            <li>Strongly typed html helpers</li>
+        </ul>
+    </li>
+
+    <li>Templated Html helpers</li>
+    <li>Custom Html Helpers</li>
+</ul>
+
+<b>Inline Html helpers</b>
+
+<p>List 1</p>
+
+@ListingNames(new string[] {"Prashant", "Harsha", "Delhi", "Hyderabad"})
+
+<p>List 2</p>
+
+@ListingNames(new string[] {"Prashant1", "Harsha1", "Delhi1", "Hyderabad1"})
+
+<b>Build in html helpers</b>
+    <p>Standard Html helpers</p>
+<p>@Html.TextBox("Textbox1", "Textbox1", new { id="textbox1", @class="textBoxclass", data_value="someData"})</p>
+<p>@Html.TextArea("TextArea", "Text Area", 5, 5, null)</p>
+<p>@Html.Password("Password", "val")</p>
+<p>@Html.Hidden("hidden","value")</p>
+<p>@Html.CheckBox("checkbox1", true) Checkbox</p>
+<p>@Html.RadioButton("Radiobutton1", "val", true) Radio</p>
+<p>@Html.DropDownList("Dropdownlist1", new SelectList(new []
+    {"Prashant","Harsha"}
+    ))
+</p>
+
+    <b>Strongly Types html helpers</b>
+    //We will Check in Mvccrud views
+
+<b>Templated html helpers</b>
+<ul>
+    <li>Editor For</li>
+    <li>Editor @Html.Editor("Name")</li>
+    <li>Display For </li>
+    <li>Display @Html.Display("Name")</li>
+</ul>
+
+@CustomHelpers.CustomImg()

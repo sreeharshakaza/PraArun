@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+    var userName = "Prashant";
+    int number = 10;
+    string string1 = "2";
+    //float floatValue = 1.22;
+    bool boolValue = true;
+    number = string1.AsInt();
+            
+}
+
+@userName
+
+@for(var i = 0; i < 10; i++){
+       @i
+}  
+
+@if (number == 10)
+{
+    <p>Number is @number</p>
+}
+else
+{
+    <p>Number is not 10</p>
+}
+
+<p>@DateTime.Now</p>
+
+<p>After converting string to int number becomes @number</p>
+
+
